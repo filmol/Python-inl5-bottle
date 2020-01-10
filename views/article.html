@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body id="container">
+    <header>
+        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a> 
+    </header>
+    <main>
+        <h2>{{!pagename}}</h2>
+        <br>
+        % for row in file:
+            <p>{{!row}}</p>
+        % end
+        <br>
+        <a href="http://localhost:8080/edit/"><button class="pos_hov">Add / Edit</button></a>
+        <a href="http://localhost:8080/remove/"><button class="neg_hov">Remove</button></a>
+    </main>
+    <footer>
+        Made by F.M
+    </footer>
+</body>
+</html>

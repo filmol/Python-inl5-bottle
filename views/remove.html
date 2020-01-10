@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link href="/static/style.css" rel="stylesheet" >
+</head>
+<body id="container">
+    <header>
+        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a> 
+    </header>
+    <main> 
+        <fieldset>
+            <legend><h3>Remove a subject</h3></legend>
+            <form action="http://localhost:8080/remove_update/" method="POST">
+                <label for="remove_subject">Titel:</label>
+                <input type="text" name="Titel" id="remove_subject" class="margin20" required>
+                <input class="neg_hov edit_button" type="submit" value="Remove">
+            </form>
+        </fieldset> 
+    </main>
+    <footer>
+        Made by F.M
+    </footer>
+</body>
+</html>

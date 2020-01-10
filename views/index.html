@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body id="container">
+    <header>
+        <img class="img1" src="https://image.flaticon.com/icons/svg/814/814476.svg" alt="wordglobe">
+        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a> 
+        <img class="img2" src="https://image.flaticon.com/icons/svg/775/775497.svg" alt="think">
+
+    </header>
+    <main>
+        <p>Found a subject that speaks to your mind? Click on it to learn more.</p>
+        <ul>
+            % for article in articles:
+            <a href="http://localhost:8080/wiki/{{article}}/"><li> {{article}} </li></a>
+            % end
+        </ul>
+        <a href="http://localhost:8080/edit/"><button class="pos_hov">Add / Edit</button></a>
+        <a href="http://localhost:8080/remove/"><button class="neg_hov">Remove</button></a>
+
+    </main>
+    <footer>
+         Made by F.M
+         <div class="cred">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+</body>
+</html>

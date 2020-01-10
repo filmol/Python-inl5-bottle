@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link href="/static/style.css" rel="stylesheet" >
+</head>
+<body id="container">
+    <header>
+        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a> 
+    </header>
+    <main> 
+        <fieldset>
+            <legend>Add a subject to the site</legend>
+            <form action="http://localhost:8080/update/" method="POST">
+                <label for="add_subject">Titel:</label>
+                <input type="text" name="Titel" id="add_subject" class="margin20" required> <br>
+                <textarea name="content" id="add_subject" cols="30" rows="10" placeholder="Write your content for the subject here..." required></textarea> <br>
+                <input class="pos_hov edit_button" type="submit" value="Save">
+            </form>
+        </fieldset> 
+        
+    </main>
+    <footer>
+        Made by F.M
+    </footer>
+</body>
+</html>

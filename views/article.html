@@ -9,7 +9,9 @@
 </head>
 <body id="container">
     <header>
-        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a> 
+        <img class="img1" src="https://image.flaticon.com/icons/svg/814/814476.svg" alt="wordglobe">
+        <img class="img2" src="https://image.flaticon.com/icons/svg/775/775497.svg" alt="think">
+        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a>
     </header>
     <main>
         <h2>{{!pagename}}</h2>
@@ -18,11 +20,17 @@
             <p>{{!row}}</p>
         % end
         <br>
-        <a href="http://localhost:8080/edit/"><button class="pos_hov">Add / Edit</button></a>
-        <a href="http://localhost:8080/remove/"><button class="neg_hov">Remove</button></a>
+        <a href="http://localhost:8080/edit/{{pagename}}/">
+            <button class="pos_hov">EDIT</button>
+        </a>
+        <a href="http://localhost:8080/remove_this/{{pagename}}/">
+            <button class="neg_hov">DELETE</button>
+        </a>
+  
     </main>
     <footer>
         Made by F.M
+        <div class="cred">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
 </body>
 </html>

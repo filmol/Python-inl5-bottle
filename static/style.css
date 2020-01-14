@@ -38,6 +38,11 @@ fieldset {
     border: none;
 }
 
+legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .edit_button {
     padding: 5px 20px;
     border-radius: 5px;
@@ -52,22 +57,58 @@ fieldset {
     transition-duration: 0.4s;
 }
 
+.pos_hov {
+    cursor: pointer;
+    background-color: rgb(2, 68, 2);
+    color: white;
+}
 .pos_hov:hover {
-    background-color: rgb(1, 109, 1);
+    background-color: rgb(0, 180, 0);
+    color: white;
+}
+.neg_hov {
+    background-color: rgb(87, 2, 2);
     color: white;
     cursor: pointer;
 }
 .neg_hov:hover {
-    background-color: rgb(139, 23, 23);
+    background-color: rgb(243, 46, 46);
     color: white;
-    cursor: pointer;
 }
 
+/* Round + / - buttons */
+#pos {
+    font-size: large;
+    background-color: rgb(2, 68, 2);
+    color: white;
+    cursor: pointer;
+    width: 50px;
+}
+#pos:hover {
+    background-color: rgb(0, 180, 0);
+    color: white;
+    width: 150px;
+}
+#neg {
+    font-size: large;
+    background-color: rgb(87, 2, 2);
+    color: white;
+    cursor: pointer;
+    width: 50px;
+}
+#neg:hover {
+    background-color: rgb(243, 46, 46);
+    color: white;
+    width: 150px;
+}
+
+
 button {
-    border-radius: 8px;
+    border-radius: 50px;
+    border: none;
     padding: 15px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
     font-size: 15px;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -149,6 +190,7 @@ input[type=text],textarea, select {
     padding: 8px 20px;
     margin: 8px 0;
     border-radius: 4px;
+    border: none;
     cursor: pointer;
   }
   
@@ -176,6 +218,9 @@ input[type=text],textarea, select {
   .cred {
       font-size: 70%;
   }
+  iframe { 
+    border: none;
+  }
   @media only screen and (max-width: 480px) {
       fieldset {
           margin: 25px auto ;
@@ -194,3 +239,4 @@ input[type=text],textarea, select {
         img {
             display: none;
         }
+    }

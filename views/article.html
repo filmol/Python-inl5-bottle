@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki</title>
+    <title>Mörtfors</title>
     <link rel="stylesheet" href="/static/style.css">
 
 </head>
@@ -11,25 +11,36 @@
     <header>
         <img class="img1" src="https://image.flaticon.com/icons/svg/814/814476.svg" alt="wordglobe">
         <img class="img2" src="https://image.flaticon.com/icons/svg/775/775497.svg" alt="think">
-        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a>
+        <a href="http://localhost:8080/"><h1>Mörtfors Dagblad</h1></a>
     </header>
     <main>
         <h2>{{!pagename}}</h2>
+        <h3>Skribent: {{!name}}</h3>
         <br>
-        % for row in file:
-            <p>{{!row}}</p>
+            <p>{{!file}}</p>
+            % i=0
+            % for link in links:
+                <img src={{link}} alt={{alt[i]}} style="width:150px">
+                <p>{{imgText[i]}}</p> 
+            % i=i+1
+            % end
+        <br>
+        <h4>Kommentarer</h4>
+        % for comment in comments:
+            <li>{{!comment}}</li>
         % end
-        <br>
+
+
+
         <a href="http://localhost:8080/edit/{{pagename}}/">
-            <button class="pos_hov">EDIT</button>
+            <button class="pos_hov">ADD</button>
         </a>
-        <a href="http://localhost:8080/remove_this/{{pagename}}/">
+        <a href="http://localhost:8080/remove/{{pagename}}">
             <button class="neg_hov">DELETE</button>
         </a>
   
     </main>
     <footer>
-        Made by F.M
         <div class="cred">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
 </body>

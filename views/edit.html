@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki</title>
+    <title>Mörtfors</title>
     <link href="/static/style.css" rel="stylesheet" >
 </head>
 <body id="container">
     <header>
         <img class="img1" src="https://image.flaticon.com/icons/svg/814/814476.svg" alt="wordglobe">
         <img class="img2" src="https://image.flaticon.com/icons/svg/775/775497.svg" alt="think">
-        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a>
+        <a href="http://localhost:8080/"><h1>Mörtfors Dagblad</h1></a>
     </header>
     <main> 
         <fieldset>
             <!-- pagename finns inte upp i webbläsaren som i article.html -->
             <legend>Edit the subject</legend>
-            <form action="http://localhost:8080/update/" method="POST">
+            <form action="http://localhost:8080/updateComments/" method="POST">
                 <label for="add_subject">Titel:</label>
                 <input type="text" name="Titel" id="add_subject" class="margin20" value= "{{pagename}}" required> <br>
-                <textarea name="content" cols="30" rows="10" placeholder="Write your content for the subject here..." required>{{'\n'.join(file)}}</textarea> <br>
-                <input class="pos_hov edit_button" type="submit" value="Save">
+               
+                <label for="namn">Namn:</label>
+                <input type="text" name="namn" id="namn" class="margin20" value= "" required> <br>
+               
+                <textarea name="content" cols="30" rows="10" placeholder="Write your content for the subject here..." required></textarea> <br>
+                <input class="pos_hov edit_button" type="submit" value="Kommentera">
             </form>
         </fieldset> 
         
     </main>
     <footer>
-        Made by F.M
         <div class="cred">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
 </body>

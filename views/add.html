@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki</title>
+    <title>Mörtfors</title>
     <link href="/static/style.css" rel="stylesheet" >
 </head>
 <body id="container">
     <header>
         <img class="img1" src="https://image.flaticon.com/icons/svg/814/814476.svg" alt="wordglobe">
         <img class="img2" src="https://image.flaticon.com/icons/svg/775/775497.svg" alt="think">
-        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a>
+        <a href="http://localhost:8080/"><h1>Mörtfors Dagblad</h1></a>
     </header>
     <main> 
         <fieldset>
             <legend>Add a subject to the site</legend>
             <form action="http://localhost:8080/update/" method="POST">
+                <label for="add_författare">Författare Pnr:</label>
+                <input type="text" name="pnr" id="add_författare" class="margin20" value="" required> <br>
                 <label for="add_subject">Titel:</label>
                 <input type="text" name="Titel" id="add_subject" class="margin20" value="" required> <br>
+                <label for="add_ingress">Ingress:</label>
+                <input type="text" name="Ingress" id="add_ingress" class="margin20" value="" required> <br>
                 <textarea name="content" cols="30" rows="10" placeholder="Write your content for the subject here..." required></textarea> <br>
-                <input class="pos_hov edit_button" type="submit" value="Save">
+                <input class="pos_hov edit_button" type="submit" value="Save"> <br>
+
+                <label for="add_link">Bild länk:</label>
+                <input type="text" name="link" id="add_link" class="margin20" value="" required> <br>
+                <label for="add_alt">Alt text:</label>
+                <input type="text" name="alt" id="add_alt" class="margin20" value="" required> <br>
+                <label for="add_imgText">Bildtext:</label>
+                <input type="text" name="imgText" id="add_imgText" class="margin20" value="" required> <br>
+
+
+
             </form>
         </fieldset> 
         

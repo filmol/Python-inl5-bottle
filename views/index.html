@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki</title>
+    <title>Mörtfors</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
@@ -12,28 +12,27 @@
     <header>
         <img class="img1" src="https://image.flaticon.com/icons/svg/814/814476.svg" alt="wordglobe">
         <img class="img2" src="https://image.flaticon.com/icons/svg/775/775497.svg" alt="think">
-        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a>
+        <a href="http://localhost:8080/"><h1>Mörtfors Dagblad</h1></a>
     </header>
 
     <main>
-        <p>Found a subject that speaks to your mind? Click on it to learn more.</p>
+        <p>Dagens nyheter direkt från Mörtfors</p>
         <ul>
+            %i=0
             % for article in articles:
             <a href="http://localhost:8080/wiki/{{article}}/">
-                <li> {{article}} </li>
+                <li> {{article}} : {{ingress[i]}} {{datum[i]}}</li>
             </a>
+            %i=i+1
             % end
+            
         </ul>
         <a href="http://localhost:8080/add/">
             <button id="pos">+</button>
         </a>
-        <a href="http://localhost:8080/remove/">
-            <button id="neg">-</button>
-        </a>
     </main>
 
     <footer>
-        Made by F.M
         <div class="cred">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
 </body>

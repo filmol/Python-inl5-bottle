@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki</title>
+    <title>Mörtfors</title>
     <link href="/static/style.css" rel="stylesheet">
 </head>
 
@@ -12,22 +12,24 @@
     <header>
         <img class="img1" src="https://image.flaticon.com/icons/svg/814/814476.svg" alt="wordglobe">
         <img class="img2" src="https://image.flaticon.com/icons/svg/775/775497.svg" alt="think">
-        <a href="http://localhost:8080/"><h1>World Knowledge</h1></a>
+        <a href="http://localhost:8080/"><h1>Mörtfors Dagblad</h1></a>
     </header>
 
     <main>
         <fieldset>
             <legend>Delete a subject</legend>
             <form action="http://localhost:8080/remove_update/" method="POST">
-                <label for="remove_subject">Title:</label>
-                <input type="text" name="Titel" id="remove_subject" class="margin20" required>
+                <label for="remove_from">Ta bort från artikel:</label>
+                <input type="text" name="Rubrik" id="remove_from" class="margin20" value= "{{pagename}}" required> <br>
+                
+                <label for="remove_subject">Vilken kommentar ID vill du ta bort?</label>
+                <input type="text" name="knr" id="remove_subject" class="margin20" required>
                 <input class="neg_hov edit_button" type="submit" value="Delete">
             </form>
         </fieldset>
     </main>
 
     <footer>
-        Made by F.M
         <div class="cred">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
     
